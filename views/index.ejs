@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <form action="/" method="post">
+      <label for="hours">Hours:</label><br>
+      <input type="number" id="hours" name="hours" step="0.01" required><br>
+      <label for="workHours">Work Hours:</label><br>
+      <select id="workHours" name="workHours">
+        <option value="8.5">8.5</option>
+        <option value="9">9</option>
+      </select><br>
+      <input type="submit" value="Calculate">
+    </form>
+    <% if (message) { %>
+    <p><%= message %></p>
+    <% } %>
+  </body>
+</html>
