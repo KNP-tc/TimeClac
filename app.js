@@ -1,11 +1,11 @@
 // Import the required libraries
 const express = require('express');
 const bodyParser = require('body-parser');
-
+const path = require('path');
 const app = express();
 
 // Use EJS as the templating engine
-app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, '.'));
 
 // Enable parsing of request body
 app.use(bodyParser.urlencoded({ extended: false }));
