@@ -20,8 +20,8 @@ app.get('/', (req, res) => {
 // Route for form submission
 app.post('/', (req, res) => {
   const daysLeft = parseFloat(req.body.days);
-  const hoursLeft = daysLeft * 24; // convert days to hours
   const workHours = parseFloat(req.body.workHours);
+  const hoursLeft = daysLeft * workHours; // convert days to hours
 
   const days = Math.floor(hoursLeft / workHours);
   const hours = Math.floor(hoursLeft % workHours);
