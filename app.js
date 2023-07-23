@@ -6,7 +6,7 @@ const app = express();
 
 // Use EJS as the templating engine
 app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, '.'));  // change this if your views are in a different folder
+app.set('views', path.join(__dirname, 'views'));  // change this if your views are in a different folder
 
 // Enable parsing of request body
 app.use(bodyParser.urlencoded({ extended: false }));
