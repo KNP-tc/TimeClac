@@ -20,7 +20,7 @@
       }
 
       .form-container {
-        width: 35%;
+        width: 60%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -41,8 +41,10 @@
       }
 
       input[type="submit"] {
-        padding: 5px;
-        font-size: 100%;
+        padding: 30px;
+        font-size: 60%;
+        font-weight: bold;
+        background-color:rgb(196, 250, 196);
       }
 
       .error-message {
@@ -74,11 +76,13 @@
           <option value="8.5">8.5</option>
           <option value="9">9</option>
         </select>
-        <input type="submit" value="คำนวนวันลาคงเหลือ" style="font-size: 50%;" >
+        <br>
+        <input type="submit" value="คำนวนวันลาคงเหลือ" >
       </form>
       
       <p class="error-message" id="errorMessage" style="font-family: 'Kanit', sans-serif; font-size: 75%;font-weight: normal;"></p>
-      <p id="resultMessage" style="font-family: 'Kanit', sans-serif; font-size: 75%;font-weight: normal;" "><% if (message) { %><%- message %><% } %></p>
+      <p id="resultMessage" style="font-family: 'Kanit', sans-serif; font-size: 75%;font-weight:lighter;" "><% if (message) { %><%- message %><% } %></p>
+    
     </div>
 
     <script>
