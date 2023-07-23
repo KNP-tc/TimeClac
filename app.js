@@ -19,14 +19,15 @@ app.get('/', (req, res) => {
 
 // Route for form submission
 app.post('/', (req, res) => {
-  const hoursLeft = parseFloat(req.body.hours);
+  const daysLeft = parseFloat(req.body.days);
+  const hoursLeft = daysLeft * 24; // convert days to hours
   const workHours = parseFloat(req.body.workHours);
 
   const days = Math.floor(hoursLeft / workHours);
   const hours = Math.floor(hoursLeft % workHours);
-  const mins = Math.floor(((hoursLeft % workHours) - hours) * 60);
+  const mins = Math.round(((hoursLeft % workHours) - hours) * 60);
 
-  const message = `${days} days ${hours} hours ${mins} mins left`;
+  const message = `จำนวนวันลาที่เหลือ: ${daysLeft.toFixed(2)}<br>ชั่วโมงทำงานต่อวัน: ${workHours}<br><br><span style="font-weight: 500;">สรุป วัน-ชม-นาที ที่เหลือ:<br>${days} วัน ${hours} ชม ${mins} นาที</span>`;
 
   res.render('index', { message });
 });
