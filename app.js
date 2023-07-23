@@ -2,10 +2,12 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
+
 const app = express();
 
-// Use EJS as the templating engine
-app.set('views', path.join(__dirname, '.'));
+// Set EJS as the templating engine
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, '.'));  // change this if your views are in a different folder
 
 // Enable parsing of request body
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -31,4 +33,4 @@ app.post('/', (req, res) => {
 });
 
 // Start the server
-app.listen(process.env.PORT || 3000, () => console.log('Server is running...'));
+app.listen(3000, () => console.log('Server is running on port 3000'));
