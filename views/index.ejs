@@ -21,6 +21,7 @@
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;
+        background-position: center;
       }
 
       .form-container {
@@ -38,9 +39,9 @@
         font-weight: normal;
         width: 100%;
         background-color: white;
-        padding: 5%;
+        padding: 10%;
         border-radius: 20px;
-        border: 1px solid #f0f0f0; 
+        border: 1px solid #eaeaea; 
       }
 
       input[type="number"], select {
@@ -92,9 +93,9 @@
         <input type="submit" value="คำนวนวันลาคงเหลือ" >
       </form>
       
-      <p class="error-message" id="errorMessage" style="font-family: 'Kanit', sans-serif; font-size: 75%;font-weight: normal;"></p>
-      <p id="resultMessage" style="font-family: 'Kanit', sans-serif; font-size: 75%;font-weight:lighter;" "><% if (message) { %><%- message %><% } %></p>
-    
+        <p class="error-message" id="errorMessage" style="font-family: 'Kanit', sans-serif; font-size: 75%;font-weight: normal;"></p>
+        <p id="resultMessage" style="font-family: 'Kanit', sans-serif; font-size: 75%;font-weight:lighter;" "><% if (message) { %><%- message %><% } %></p>
+
     </div>
 
     <script>

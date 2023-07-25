@@ -11,6 +11,7 @@ app.set('views', path.join(__dirname, 'views'));  // change this if your views a
 // Enable parsing of request body
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Route for the home page
 app.get('/', (req, res) => {
